@@ -1,0 +1,25 @@
+package CardValidators;
+
+public class americanexp {
+	
+	/**
+	 * American Express Card
+	 * IIN ranges: 34,37
+	 * Length: 15
+	 * 
+	 */
+	
+	public boolean check(int[] digits) {
+		//use to check cc length
+		if (digits.length != 15) {
+			System.out.println("Invalid card number");
+			
+		}
+		int firstTwoDigits = Integer.parseInt((digits[0] + "" + digits[1]));
+		if (firstTwoDigits == 34 || firstTwoDigits == 37) {
+			return true;
+		}
+	
+	return false;
+	}
+}
